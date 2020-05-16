@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
+import InputSum from './InputSum';
+import InputExp from './InputExp';
+
 import './style.css';
 import ReactDOM from 'react-dom';
 interface AppProps { 
@@ -78,34 +80,40 @@ class App extends Component<AppProps, AppState, > {
     return (
       <div className="uk-container uk-container-small uk-margin-small-top">
         <div className="uk-card uk-card-default">
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} className="uk-margin-small-left uk-margin-small-right">
+
             <h4 className="uk-heading-line uk-text-center"><span>Входные данные</span></h4>
-            <div className="uk-flex">
-            </div>
-              <ul uk-accordion="multiple: true" className="uk-margin-small-left">
+
+              <InputExp val={this.state.SumOPV} handleChange={this.handleChange}/>
+
+              <ul uk-accordion="multiple: true" className="">
                 <li className="uk-open">
                     <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Обязательные пенсионные взносы (ОПВ) </a>
                     <div className="uk-accordion-content">
-                      <label>
-                        текущая сумма накоплений:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />
-                      </label>
+                      <InputSum val={this.state.SumOPV} handleChange={this.handleChange}/>
                     </div>
                 </li>
+
                 <li>
                     <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Обязательные профессиональные пенсионные взносы (ОППВ) </a>
                     <div className="uk-accordion-content">
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                        <InputSum val={this.state.SumOPPV} handleChange={this.handleChange}/>
                     </div>
                 </li>
+                
                 <li>
                     <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Добровольные пенсионные взносы (ДПВ) </a>
                     <div className="uk-accordion-content">
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                        <InputSum val={this.state.SumDPV} handleChange={this.handleChange}/>
                     </div>
                 </li>
             </ul>
-            <button type="submit" className = "uk-button uk-button-primary">ssss</button>     
+
+            <div className="uk-flex uk-flex-around">
+              <button  className = "uk-button uk-button-danger uk-margin-small-bottom uk-text-center">Сбросить</button>  
+              <button type="submit" className = "uk-button uk-button-primary uk-margin-small-bottom uk-text-center">Рассчитать</button>   
+            </div>  
+
           </form>
         </div>
         
