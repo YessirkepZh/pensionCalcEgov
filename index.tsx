@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
-
+import ReactDOM from 'react-dom';
 interface AppProps { 
 
 }
@@ -34,7 +34,8 @@ interface AppState {
   email:string;
 }
 
-class App extends Component<AppProps, AppState  > {
+
+class App extends Component<AppProps, AppState, > {
   constructor(props) {
     super(props);
     this.state = {
@@ -66,15 +67,46 @@ class App extends Component<AppProps, AppState  > {
     };
   
   }
+  handleChange(event) {
+   
+  }
 
+  handleSubmit(event) {
+
+  }
   render() {
     return (
       <div className="uk-container uk-container-small uk-margin-small-top">
-      
-     
         <div className="uk-card uk-card-default">
-          <button className = "uk-button uk-button-primary">ssss</button>     
-
+          <form onSubmit={this.handleSubmit}>
+            <h4 className="uk-heading-line uk-text-center"><span>Входные данные</span></h4>
+            <div className="uk-flex">
+            </div>
+              <ul uk-accordion="multiple: true" className="uk-margin-small-left">
+                <li className="uk-open">
+                    <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Обязательные пенсионные взносы (ОПВ) </a>
+                    <div className="uk-accordion-content">
+                      <label>
+                        текущая сумма накоплений:
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />
+                      </label>
+                    </div>
+                </li>
+                <li>
+                    <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Обязательные профессиональные пенсионные взносы (ОППВ) </a>
+                    <div className="uk-accordion-content">
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                    </div>
+                </li>
+                <li>
+                    <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Добровольные пенсионные взносы (ДПВ) </a>
+                    <div className="uk-accordion-content">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                    </div>
+                </li>
+            </ul>
+            <button type="submit" className = "uk-button uk-button-primary">ssss</button>     
+          </form>
         </div>
         
       </div>
