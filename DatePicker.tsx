@@ -73,7 +73,7 @@ function DateFnsLocalizationExample() {
           format="dd.MM.yyyy"
           views={["year", "month", "date"]}
           onChange={handleDateChange}
-          
+          className="uk-width-1-3 uk-text-small"
         />
 
         <Menu
