@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default ({ val,handleChange }) => 
-<label className="uk-text-small uk-flex uk-flex-between">
+<label className="uk-text-small uk-flex uk-flex-between uk-margin-remove">
   текущая сумма накоплений:
-  <input type="text" value={val} onChange={handleChange} className="uk-text-right"/>
+  <input type="text" value={val} onChange={handleChange} className="uk-input uk-form-small uk-text-right uk-width-1-2"/>
 </label>;
 

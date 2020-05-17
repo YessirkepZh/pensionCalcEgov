@@ -5,3 +5,7 @@ h1, p {
   color:red;
   background-color: none;
 }
+.infoblock{
+  color:#32d296!important;
+  margin-top:-7px!important;
+}

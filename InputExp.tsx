@@ -1,12 +1,17 @@
 import React from 'react';
 
-export default ({ val,handleChange }) => 
-<div className="uk-text-small">
-<span className="uk-text-primary">Трудовой стаж до 1998 года</span>
-<label className="uk-text-small uk-flex uk-flex-around">
-  <input type="text" value={val} onChange={handleChange} className="uk-text-right"/>
-  лет
-  <input type="text" value={val} onChange={handleChange} className="uk-text-right"/>
-  мес.
-</label>
+
+export default ({ val,handleChange, title}) => 
+<div className="uk-text-small uk-margin-small-bottom">
+  <span className="uk-text-primary ">{title}</span>
+
+
+  <div className="uk-flex uk-margin-small-top">
+    <input type="text" value={val} onChange={handleChange} className="uk-input uk-text-right uk-width-1-4 uk-form-small"/>
+    <span className="uk-margin-small-left uk-margin-small-right uk-margin-small-top">лет</span>
+    
+    <input type="text" value={val} onChange={handleChange} className="uk-text-right uk-width-1-4 uk-input uk-form-small"/>
+    <span className="uk-margin-small-left uk-margin-small-top">лет</span>
+
+  </div>
 </div>;
