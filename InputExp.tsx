@@ -3,7 +3,7 @@ import React from 'react';
 
 export default ({ val,handleChange, title}) => 
 <div className="uk-text-small uk-margin-small-bottom">
-  <span className="uk-text-primary ">{title}</span>
+  <span className="uk-text-primary uk-heading-bullet">{title}</span>
 
 
   <div className="uk-flex uk-margin-small-top">

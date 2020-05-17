@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ val,handleChange, classN}) => 
+export default ({ handleChange, classN}) => 
 <select  className={classN}>
   <option value="1">1</option>
   <option value="2">2</option>

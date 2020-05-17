@@ -5,9 +5,11 @@ import InputExp from './InputExp';
 import InputSalary from './InputSalary';
 import SelectPeriod from './SelectPeriod';
 import InfoBlock from './InfoBlock';
-
+import DatePicker from './DatePicker'
 import './style.css';
 import ReactDOM from 'react-dom';
+
+
 interface AppProps { 
 
 }
@@ -87,6 +89,19 @@ class App extends Component<AppProps, AppState, > {
 
             <h4 className="uk-heading-line uk-text-center"><span>Входные данные</span></h4>
 
+              <div className="uk-flex uk-flex-left uk-text-small uk-margin-small-bottom">
+                <span className="uk-text-primary uk-margin-small-right uk-margin-small-top uk-heading-bullet">Пол:</span>
+                <div uk-switcher="animation: uk-animation-fade; toggle: > *" className="uk-margin-remove-top ">
+                    <button className="uk-button uk-button-default uk-button-small uk-text-lowercase" type="button">Мужской</button>
+                    <button className="uk-button uk-button-default uk-button-small uk-text-lowercase" type="button">Женский</button>
+                </div>
+              </div>
+
+              <div className="uk-flex uk-flex-left uk-text-small uk-margin-small-bottom">
+                <span className="uk-text-primary uk-margin-small-right uk-margin-small-top uk-heading-bullet">Дата рождения:</span>
+                 <DatePicker/>
+              </div>
+
               <InputExp val={this.state.SumOPV} handleChange={this.handleChange} title="Трудовой стаж до 1998 года"/>
 
               <InputExp val={this.state.SumOPV} handleChange={this.handleChange} title="Стаж в накопительной пенсионной системе с 1998 года"/>
@@ -95,29 +110,35 @@ class App extends Component<AppProps, AppState, > {
 
               <div className="uk-flex uk-flex-column">
 
-                <span className="uk-text-small uk-text-primary">периодичность взносов: <InfoBlock text="Добровольные пенсионные взносы"/></span>
+                <span className="uk-text-small uk-text-primary uk-heading-bullet">Периодичность взносов: <InfoBlock text="Добровольные пенсионные взносы"/></span>
 
-                <SelectPeriod val="12" handleChange={this.handleChange} classN="uk-select uk-form-small uk-margin-small-top uk-margin-small-bottom uk-text-right uk-width-1-5"/>
+                <SelectPeriod handleChange={this.handleChange} classN={"uk-select uk-form-small uk-margin-small-top uk-margin-small-bottom uk-text-right uk-width-1-5"}/>
                 
               </div>
 
-              <ul uk-accordion="multiple: true" className="uk-margin-remove-top">
-                <li className="uk-open">
-                    <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Обязательные пенсионные взносы (ОПВ) </a>
+              <ul uk-accordion="multiple: true;animation:true" className="uk-margin-remove-top ">
+                <li className="uk-open ">
+                    <a className="uk-accordion-title uk-text-small uk-text-primary " href="#">
+                      <span className="uk-heading-bullet">Обязательные пенсионные взносы (ОПВ)</span> 
+                    </a>
                     <div className="uk-accordion-content">
                       <InputSum val={this.state.SumOPV} handleChange={this.handleChange}/>
                     </div>
                 </li>
 
                 <li>
-                    <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Обязательные профессиональные пенсионные взносы (ОППВ) </a>
+                    <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">
+                      <span className="uk-heading-bullet">Обязательные профессиональные пенсионные взносы (ОППВ)</span> 
+                    </a>
                     <div className="uk-accordion-content">
                         <InputSum val={this.state.SumOPPV} handleChange={this.handleChange}/>
                     </div>
                 </li>
 
                 <li>
-                    <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">Добровольные пенсионные взносы (ДПВ) </a>
+                    <a className="uk-accordion-title uk-text-small uk-text-primary" href="#">
+                      <span className="uk-heading-bullet">Добровольные пенсионные взносы (ДПВ)</span>
+                    </a>
                     <div className="uk-accordion-content">
                         <InputSum val={this.state.SumDPV} handleChange={this.handleChange}/>
 
@@ -129,11 +150,11 @@ class App extends Component<AppProps, AppState, > {
 
                           <div className="uk-flex uk-flex-column uk-margin-small-left">
                             <span>периодичность взносов:</span>
-                             <SelectPeriod val="12" handleChange={this.handleChange} classN="uk-select uk-form-small uk-margin-small-top uk-margin-small-bottom uk-text-right uk-width-1-2"/>
+                             <SelectPeriod  handleChange={this.handleChange} classN="uk-select uk-form-small uk-margin-small-top uk-margin-small-bottom uk-text-right uk-width-1-2"/>
                           </div>
                         </div>
 
-                        <div className="uk-flex uk-flex-left uk-flex-column uk-text-small uk-margin-small-top">
+                        <div className="uk-flex uk-flex-left uk-flex-column uk-text-small">
                           <span>сумма добровольных взносов:
                             <InfoBlock text="Добровольные пенсионные взносы"/>
                           </span>
