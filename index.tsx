@@ -180,7 +180,17 @@ class App extends Component<AppProps, AppState, > {
 
           </form>
         </div>
-        
+        <div className="uk-card uk-card-default uk-margin-small-top uk-margin-small-bottom">
+          <h4 className="uk-heading-line uk-text-center"><span>Прогноз вашей пенсии</span></h4>
+        <div>
+          <ul uk-tab>
+              <li className="uk-active"><a href="#">Left</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+          
+          </ul>
+        </div>
+        </div>
       </div>
     );
   }
