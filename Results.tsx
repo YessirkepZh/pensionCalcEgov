@@ -5,12 +5,12 @@ import InfoBlock from './InfoBlock';
 export default ({ obj }) => 
 <div className="uk-text-small uk-margin-small-bottom">
 
-  <div className="uk-flex-inline uk-flex-bottom" uk-grid="true">
+  <div className="uk-flex uk-flex-bottom">
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary  titleRes">возраст и дата выхода на пенсию (ОПВ/ОППВ) <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-small"><span className="uk-text-bold uk-text-emphasis ">12</span> лет <span className="uk-text-bold uk-text-emphasis ">12.12.2025</span></div>
   </div>
   
-  <div className="uk-flex-inline uk-flex-bottom uk-margin-small-top" >
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top" >
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" >
         <span className="uk-text-primary  titleRes">возраст и дата начала получения выплат по ДПВ <InfoBlock text="Добровольные пенсионные взносы"/></span>
       </div>
@@ -19,71 +19,71 @@ export default ({ obj }) =>
       </div>
   </div>
 
-  <div className="uk-flex-inline uk-flex-bottom uk-margin-small-top" >
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top" >
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary  titleRes">количество лет до исчерпания накоплений по ОПВ <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-emphasis"><span className="uk-text-bold uk-text-emphasis ">12</span> лет</div>
   </div>
 
-  <div className="uk-flex-inline uk-flex-bottom uk-margin-small-top">
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top">
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary  titleRes">количество лет до исчерпания накоплений по ОППВ <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-small"><span className="uk-text-bold uk-text-emphasis ">12</span> лет</div>
   </div>
 
-  <div className="uk-flex-inline uk-flex-bottom uk-margin-small-top">
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top">
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary  titleRes">количество лет до исчерпания накоплений по ДПВ <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-small"><span className="uk-text-bold uk-text-emphasis ">12</span> лет</div>
   </div>
 
-  <div className="uk-flex-inline uk-flex-bottom uk-margin-small-top" uk-grid="true">
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top">
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary ">солидарная пенсия, тг/мес. <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
   </div>
-
-  <div className="uk-grid-small" uk-grid="true">
+  
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top">
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary ">базовая пенсия, тг/мес. <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
   </div>
 
-  <div className="uk-grid-small" uk-grid="true">
-      <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary  ">пенсия из ЕНПФ, тг/мес <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top">
+      <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary ">пенсия из ЕНПФ, тг/мес <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
   </div>
 
     <span className="uk-margin-small-left">в том числе:</span>
 
-    <div className="uk-grid-small uk-margin-medium-left uk-margin-remove-top" uk-grid="true">
-      <div className="uk-width-expand" uk-leader="true"><span className="uk-text-primary  titleRes">ОПВ</span></div>
+    <div className="uk-flex uk-flex-bottom uk-margin-small-top uk-margin-medium-left">
+        <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary titleRes">ОПВ <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
+        <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
+    </div>
+
+     <div className="uk-flex uk-flex-bottom uk-margin-small-top uk-margin-medium-left">
+      <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary titleRes ">ОППВ <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
     </div>
 
-    <div className="uk-grid-small uk-margin-medium-left uk-margin-remove-top" uk-grid="true">
-      <div className="uk-width-expand" uk-leader="true"><span className="uk-text-primary  titleRes">ОППВ</span></div>
-      <div className="uk-text-emphasis uk-text-bold uk-text-small ">129 000</div>
+    <div className="uk-flex uk-flex-bottom uk-margin-small-top uk-margin-medium-left">
+        <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary titleRes ">ДПВ <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
+        <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
     </div>
 
-    <div className="uk-grid-small uk-margin-medium-left uk-margin-remove-top" uk-grid="true">
-      <div className="uk-width-expand" uk-leader="true"><span className="uk-text-primary  titleRes">ДПВ</span></div>
-      <div className="uk-text-emphasis uk-text-bold uk-text-small ">129 000</div>
-    </div>
-
-  <div className="uk-flex-inline uk-flex-bottom uk-margin-remove-top" uk-grid="true">
+  <div className="uk-flex uk-flex-bottom uk-margin-remove-top">
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary  titleRes">Пенсионный аннуитет из страховой компании, тг/мес <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-emphasis uk-text-bold uk-text-small uk-text-bottom">129 000</div>
   </div>
 
-  <div className="uk-grid-small" uk-grid="true">
-      <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary uk-text-bold titleRes titleRes">ПОБЩАЯ СУММА, ТГ/МЕС. <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top ">
+      <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary titleRes uk-text-bold">ПОБЩАЯ СУММА, ТГ/МЕС. <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
       <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
   </div>
 
-   <div className="uk-grid-small" uk-grid="true">
-      <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary  titleRes">Прогнозируемая заработная плата <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
-      <div className="uk-text-emphasis uk-text-bold uk-text-small uk-text-bottom">129 000</div>
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top">
+      <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary ">Прогнозируемая заработная плата <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
+      <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
   </div>
-  
-   <div className="uk-grid-small" uk-grid="true">
+
+  <div className="uk-flex uk-flex-bottom uk-margin-small-top">
       <div className="uk-width-expand uk-heading-bullet" uk-leader="true" ><span className="uk-text-primary uk-text-normal">Коэффициент замещения <InfoBlock text="Добровольные пенсионные взносы"/></span></div>
-      <div className="uk-text-emphasis uk-text-bold uk-text-small uk-text-bottom">129 000</div>
+      <div className="uk-text-emphasis uk-text-bold uk-text-small">129 000</div>
   </div>
 
   <div className="uk-flex uk-flex-around uk-margin-small-top uk-margin-small-bottom">

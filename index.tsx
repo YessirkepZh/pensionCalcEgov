@@ -82,6 +82,11 @@ class App extends Component<AppProps, AppState, > {
   handleSubmit(event) {
 
   }
+  countReq(e):void{
+    console.log(e)
+    
+  }
+  
   render() {
     return (
       <div className=" uk-margin-small-top">
@@ -175,8 +180,8 @@ class App extends Component<AppProps, AppState, > {
             </ul>
 
             <div className="uk-flex uk-flex-around">
-              <button  className = "uk-button uk-button-danger uk-margin-small-bottom uk-button-small uk-text-center">Сбросить</button>  
-              <button type="submit" className = "uk-button uk-button-primary uk-margin-small-bottom uk-button-small uk-text-center">Рассчитать</button>   
+              <button  className = "uk-button uk-button-danger uk-margin-small-bottom uk-button-small uk-text-center" >Сбросить</button>  
+              <a href="" type="submit" onClick={this.countReq} className = "uk-button uk-button-primary uk-margin-small-bottom uk-button-small uk-text-center" >Рассчитать</a>   
             </div>  
 
           </form>
@@ -204,12 +209,12 @@ class App extends Component<AppProps, AppState, > {
                       </li>
                       <li>
                           <ul className="uk-list"> 
-                              ppp
+                              <Results obj={this.state.SumDPV}/>
                           </ul>
                       </li>
                       <li>
                           <ul className="uk-list"> 
-                            ooo
+                            <Results obj={this.state.SumDPV}/>
                           </ul>
                       </li>
                       
