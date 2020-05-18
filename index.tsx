@@ -84,7 +84,7 @@ class App extends Component<AppProps, AppState, > {
   }
   render() {
     return (
-      <div className="uk-container uk-container-small uk-margin-small-top">
+      <div className=" uk-margin-small-top">
         <div className="uk-card uk-card-default">
           <form onSubmit={this.handleSubmit} className="uk-margin-small-left uk-margin-small-right">
 
@@ -146,7 +146,7 @@ class App extends Component<AppProps, AppState, > {
                         <div className="uk-flex uk-flex-left uk-margin-small-top uk-text-small">
                           <div className="uk-flex uk-flex-column">
                             <span>возраст получения:</span>
-                            <input type="text" value={this.state.SumDPV} className="uk-text-right uk-width-1-2 uk-margin-small-top uk-width-1-2 uk-input uk-form-small"/>
+                            <input type="text" defaultValue={this.state.SumDPV} className="uk-text-right uk-width-1-2 uk-margin-small-top uk-width-1-2 uk-input uk-form-small"/>
                           </div>
 
                           <div className="uk-flex uk-flex-column uk-margin-small-left">
@@ -159,14 +159,14 @@ class App extends Component<AppProps, AppState, > {
                           <span>сумма добровольных взносов:
                             <InfoBlock text="Добровольные пенсионные взносы"/>
                           </span>
-                          <input type="text" value={this.state.SumDPV} className="uk-text-right uk-width-1-2 uk-margin-small-top uk-width-1-2 uk-input uk-form-small"/>
+                          <input type="text" defaultValue={this.state.SumDPV} className="uk-text-right uk-width-1-2 uk-margin-small-top uk-width-1-2 uk-input uk-form-small"/>
                         </div>
 
                         <div className="uk-flex uk-flex-left uk-flex-column uk-text-small uk-margin-small-top">
                           <span>желаемая ежемесячная выплата в тенге:
                             <InfoBlock text="Добровольные пенсионные взносыДобровольные пенсионные взносыДобровольные пенсионные взносы"/>
                           </span>
-                          <input type="text" value={this.state.SumDPV} className="uk-text-right uk-width-1-2 uk-margin-small-top uk-width-1-2 uk-input uk-form-small"/>
+                          <input type="text" defaultValue={this.state.SumDPV} className="uk-text-right uk-width-1-2 uk-margin-small-top uk-width-1-2 uk-input uk-form-small"/>
                         </div>
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default ({ text }) => 
   <div className="uk-inline">
-      <span className="uk-margin-small-left infoblock" uk-icon="info"></span>
+      <span className="infoblock" uk-icon="info"></span>
     
     <div uk-dropdown="mode: click;animation: uk-animation-slide-top-small; duration: 1000">
     {text}</div>
