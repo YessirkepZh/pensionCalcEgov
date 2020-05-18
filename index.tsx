@@ -6,6 +6,7 @@ import InputSalary from './InputSalary';
 import SelectPeriod from './SelectPeriod';
 import InfoBlock from './InfoBlock';
 import DatePicker from './DatePicker'
+import Results from './Results'
 import './style.css';
 import ReactDOM from 'react-dom';
 
@@ -180,16 +181,44 @@ class App extends Component<AppProps, AppState, > {
 
           </form>
         </div>
+
         <div className="uk-card uk-card-default uk-margin-small-top uk-margin-small-bottom">
-          <h4 className="uk-heading-line uk-text-center"><span>Прогноз вашей пенсии</span></h4>
-        <div>
-          <ul uk-tab>
-              <li className="uk-active"><a href="#">Left</a></li>
-              <li><a href="#">Item</a></li>
-              <li><a href="#">Item</a></li>
-          
-          </ul>
-        </div>
+          <form onSubmit={this.handleSubmit} className="uk-margin-small-left uk-margin-small-right">
+            <h4 className="uk-heading-line uk-text-center"><span>Прогноз вашей пенсии</span></h4>
+
+            <div uk-grid>
+              <div className="uk-width-auto">
+                  <ul className="uk-tab-left" uk-tab="connect: #datas">
+                      <li><a className="uk-text-small uk-text-capitalize" href="#">Пессимистичный</a></li>
+                      <li><a className="uk-text-small uk-text-capitalize"  href="#">Реалистичный</a></li>
+                      <li><a className="uk-text-small uk-text-capitalize"  href="#">Оптимистичный</a></li>
+                      
+                  </ul>
+              </div>
+              <div className="uk-width-expand">
+                  <ul id="datas" className="uk-switcher" >
+                      <li>
+                          <ul className="uk-list"> 
+                              <Results obj={this.state.SumDPV}/>
+                          </ul>
+                      </li>
+                      <li>
+                          <ul className="uk-list"> 
+                              ppp
+                          </ul>
+                      </li>
+                      <li>
+                          <ul className="uk-list"> 
+                            ooo
+                          </ul>
+                      </li>
+                      
+                  </ul>
+              </div>
+            </div>
+          </form>        
+    
+
         </div>
       </div>
     );

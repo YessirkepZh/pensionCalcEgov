@@ -12,3 +12,11 @@ h1, p {
 .uk-active {
   border-color:#1e87f0!important;
 }
+
+.uk-tab > .uk-active > a {
+    color: #333;
+    border-color: #1e87f0;
+}
+.titleRes{
+  font-size:12px;
+}

@@ -7,10 +7,10 @@ export default ({ val,handleChange, title}) =>
 
 
   <div className="uk-flex uk-margin-small-top">
-    <input type="text" value={val} onChange={handleChange} className="uk-input uk-text-right uk-width-1-4 uk-form-small"/>
+    <input type="text" defaultValue={val} onChange={handleChange} className="uk-input uk-text-right uk-width-1-4 uk-form-small"/>
     <span className="uk-margin-small-left uk-margin-small-right uk-margin-small-top">лет</span>
     
-    <input type="text" value={val} onChange={handleChange} className="uk-text-right uk-width-1-4 uk-input uk-form-small"/>
+    <input type="text" defaultValue={val} onChange={handleChange} className="uk-text-right uk-width-1-4 uk-input uk-form-small"/>
     <span className="uk-margin-small-left uk-margin-small-top">лет</span>
 
   </div>
